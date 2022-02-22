@@ -1,0 +1,790 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+img {
+    border: none;
+    display: block;
+}
+li {
+    list-style: none;
+}
+button {
+    cursor: pointer;
+}
+body {
+    width: 100%;
+    font-family: 'NanumSquare', sans-serif; 
+    overflow-x: hidden;
+}
+.nav-up {
+    top: -43px;
+}
+header {  
+    width: 100%;
+    background-color: #222222;
+    position: fixed;
+    height: 43px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: top 0.2s ease-in-out;
+}
+header .netmarble {
+    width: 146px;
+    height: 73px;
+}
+header .box1 {
+    width: 146px;
+    height: 43px;
+}
+header .logo {
+    position: absolute;
+    top: 60px;
+    left: 35px;
+    width: 98px;
+    height: 88px;
+    padding: 5px;
+    z-index: 2;
+}
+header .menu-box {
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    z-index: 10;
+}
+header .menu-box .download-btn {
+    width: 130px;
+    height: 32px;
+    background-color: #0698e4;
+    border: none;
+    border-radius: 16px;
+    box-sizing: border-box;
+    color: #f2f2f2;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+header .menu-box .menu-btn {
+    background: url(../images/menu-icon.png);
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    margin-left: 15px;
+    font-size: 0;
+}
+header .panel-active {
+    width: 450px;
+    height: 1000px;
+    background-color: #ffffff;
+    position: absolute;
+    right:  -1060px;
+    z-index: 10;
+    transform: translateZ(0);
+    display: none;
+}
+header .panel-active .panel-inner {
+    width: 450px;
+    height: 575px;
+    position: relative;
+    margin: 0 auto;
+}
+header .panel-active .panel-inner h2 img{
+    width: 104px;
+    height: 94px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+header .close-btn {
+    background: url(../images/menu-back.png) no-repeat 50% 50%;
+    width: 35px;
+    height: 35px;
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+header .panel-active .panel-inner nav {
+    width: 570px;
+    height: 200px;
+    margin-top: 50px;
+}
+header .panel-active .panel-inner nav li {
+    font-size: 20px;
+    font-weight: 700;
+    width: 380px;
+    height: 70px;
+    margin-left: 35px;
+    border-bottom: 1px dashed #999999;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .panel-active .panel-inner nav li:last-child {
+    border: none;
+}
+header .panel-community .menu-community {
+    margin-left: 150px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/menu-community-icon.png)no-repeat 50% 50%;
+}
+header .panel-community .menu-facebook {
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/menu-facebook-icon.png) no-repeat 50% 50%;
+}
+header .panel-community .menu-youtube {
+    margin-left: 15px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/menu-youtube-icon.png) no-repeat 50% 50% ;
+}
+header .panel-active .menu-color {
+    position: relative;
+}
+header .panel-active .menu-color:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background: #fed619;
+    height: 5px;
+    z-index: -1;
+}
+header .panel-active li:nth-child(2) .menu-color::after {
+    transition: 0.2s;
+    transform: scaleX(0);
+}
+header .panel-active li:nth-child(2) .menu-color:hover::after {
+    width: 100%;
+    transition-delay: 0.2s;
+    transform: scaleX(1);
+}
+header .download-btn2 {
+    background: url(../images/download-btn2.png) no-repeat 50% 50%;
+    width: 150px;
+    height: 70px;
+    border: none;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+}
+header .sharebox {
+    width: 350px;
+    height: 70px;
+    margin: 0 auto ;
+    margin-top: 50px;
+    background-color: #fed619;
+    display: flex;
+    align-items: center;
+}
+header .sharebox p {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 30px;
+}
+header .sharebox .facebook-share {
+    background: url(../images/menu-facebook-icon2.png) no-repeat 50% 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    margin-left: 40px;
+}
+header .sharebox .link-share {
+    background: url(../images/menu-share-icon.png) no-repeat 50% 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    margin-left: -5px;
+}
+main {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.sec1 {
+    width: 100%;
+    height: 950px;
+    position: relative;
+    z-index: 1;
+}
+.sec1 .videobox{
+    width: 100%;
+    height: 940px;
+    overflow: hidden;
+}
+.sec1 .center {
+    width: 720px;
+    height: 700px;
+    position: relative;
+    z-index: 2;
+    top: -85%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.sec1 .center .logobig {
+    width: 250px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+.sec1 .center .youtube-btn {
+    width: 78px;
+    height: 77px;
+    background: url(../images/main-button.png) no-repeat 50% 50%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 39%;
+}
+.sec1 .center .main-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 52%;
+    z-index: 1;
+}
+.sec1 .center .download-btn2 {
+    width: 340px;
+    height: 100px;
+    background: url(../images/download-btn.png) no-repeat 50% 50%;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 88%;
+    transform: translate(-50%);
+}
+.sec2 {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 1200px;
+    background: url(../images/background-img.jpg) no-repeat 50% 0;
+    background-size: cover;
+    background-position: center;
+}
+.sec2 .center2 {
+    width: 720px;
+    height: 1050px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.sec2 .center2 .update-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sec2 .center2 p {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+.sec2 .center2 .update-btn {
+    width: 523px;
+    background: url(../images/container-button.png) no-repeat 50% 50%;
+    height: 100px;
+    border: none;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 82%;
+
+}
+.sec3 {
+    width: 100%;
+    height: 1050px;
+    background: url(../images/background-community.jpg) no-repeat 50% 0;
+    position: relative;
+    z-index: 1;
+}
+.sec3 .center3 {
+    width: 720px;
+    height: 1000px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.sec3 .center3 h3{
+    background: url(../images/community-text.png) no-repeat 50% 0;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.sec3 .notice {
+    width: 720px;
+    height: 300px;
+    position: relative;
+    top: -55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.sec3 .notice li {
+    height: 100px;
+    border-top: 1px solid #e5e5e5;
+}
+.sec3 .notice li:first-child {
+    border: none;
+}
+.sec3 .notice a {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.sec3 .notice .title {
+    font-size: 25px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 490px;
+    overflow: hidden;
+}
+.sec3 .notice .icon-n {
+    background: url(../images/N.png) no-repeat 50% 50%;
+    width: 34px;
+    height: 34px;
+    font-size: 0;
+    display: inline-block;
+    margin : -10px 0 0 5px;
+}
+.sec3 .notice .date {
+    color: #0698e4;
+    font-size: 24px;
+    font-weight: 900;
+    margin-left: auto;
+}
+.sec3 .more-btn {
+    width: 720px;
+    height: 50px;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: -65%;
+    left: 50%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+}
+.sec3 .more-btn .more-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  color: #121331;
+  padding: 0 3px;
+  font-size: 26px;
+}
+.sec3 .more-btn .more-icon ::after {
+    content: "";
+    width: 19px;
+    height: 19px;
+    background: url(../images/more-icon.png) no-repeat 50% 50%;
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+.sec3 .more-btn .more-icon span {
+    position: relative;
+    z-index: 10;
+}
+.sec3 .link {
+    width: 720px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: -55%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.sec3 .btn-forum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+}
+.sec3 .btn-facebook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+}
+.sec3 .btn-youtube {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+}
+.sec3 .link a span {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.sec4 {
+    width: 100%;
+    height: 1100px;
+    background: url(../images/background-download.jpg) no-repeat 50% 0;
+    position: relative;
+    z-index: 1;
+}
+.sec4 .center4 {
+    width: 720px;
+    height: 1000px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.sec4 .center4 .down-title {
+    width: 720px;
+    overflow: hidden;
+    margin-top: 130px;
+}
+.sec4 .center4 h3 img {
+    margin: 0 auto;
+}
+.sec4 .center4 p {
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 15px;
+}
+.sec4 .down-icon {
+    width: 720px;
+    overflow: hidden;
+    margin-top: 80px;
+}
+.sec4 .down-icon img {
+    margin: 0 auto;
+}
+.sec4 .down-btn {
+    width: 720px;
+    overflow: hidden;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.sec4 .down-btn .app-store {
+    width: 280px;
+    height: 100px;
+    background: url(../images/app-store.png) no-repeat 50% 50%;
+    background-color: transparent;
+    border: none;
+}
+.sec4 .down-btn .google-play {
+    width: 285px;
+    height: 100px;
+    background: url(../images/google-play.png) no-repeat 50% 50%;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+}
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: flex-start;
+}
+footer .left-box {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    display: flex;
+}
+footer .left-box img {
+    margin-top: 20px;
+}
+footer .text-box {
+    width: 1000px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+}
+footer .text-box p {
+    color : hsla(0,0%,100%,.5);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 20px;
+}
+main .top {
+    position: fixed;
+    right: 105px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    display: none;
+}
+main .top a {
+    background: url(../images/top-button.png) no-repeat 50% 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    background-color: transparent;
+    display: block;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+#click-background .click-download {
+    width: 100%;
+    overflow-y: auto;
+    background-color: rgba(0,0,0,.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+.click-inner {
+    width: 440px;
+    height: 440px;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 250px;
+    border: 5px solid rgb(187, 187, 187);
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+}
+.click-inner h2 img {
+    margin: 0 auto;
+    width: 55%;
+    margin-top: 40px;
+}
+.click-inner .qr-img {
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.click-inner p {
+    text-align: center;
+    color: #797979;
+    margin-top: 20px;
+    font-weight: 550;
+    font-size: 17px;
+    line-height: 1.35;
+    letter-spacing: -1px;
+}
+.click-inner #close-btn2 {
+    width: 15px;
+    height: 15px;
+    border: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: url(../images/close-btn.png) no-repeat 50% 50%;
+}
+
+.sec3 .more-btn .more-icon .menu-color {
+    position: relative;
+}
+.sec3 .more-btn .more-icon .menu-color::before {
+content: "";
+width: 100%;
+height: 10px;
+position: absolute;
+top: 16px;
+background: #fed619;
+z-index: -1;
+}
+@media screen and (max-width: 768px) {
+    header .panel-active {
+        width: 100%;
+        height: 100vh;
+    }
+    header .panel-active .panel-inner {
+        width: 100%;
+    }
+    header .panel-active .panel-inner nav {
+        width: 100%;
+    }
+    header .panel-active .panel-inner nav ul li {
+        font-size: 16px;
+        width : 90%;
+        margin-left: 15px;
+    }
+    header .panel-active .panel-inner .menu-community {
+        background-size: 70%;
+        margin-left: 30%;
+    }
+    header .panel-active .panel-inner .menu-facebook {
+        background-size: 50%;
+    }
+    header .panel-active .panel-inner .menu-youtube {
+        background-size: 70%;
+
+    }
+    header .sharebox {
+        width: 90%;
+    }
+    header .sharebox p {
+        font-size: 14px;
+        margin-left: 12px;
+    }
+    header .sharebox .facebook-share {
+        background-size: 70%;
+        margin-left: 25%;
+    }
+    header .sharebox .link-share {
+        background-size: 70%;
+    }
+    header .logo {
+        width: 18%;
+    }
+    header .menu-box {
+        width: 30%;
+    }
+    header .menu-box .download-btn {
+        width: 70%;
+        font-size: 12px;
+    }
+    .sec1 .center .logobig {
+        width: 30%;
+    }
+    .sec1 .center .main-text {
+        width: 60%;
+    }
+    .sec1 .center .download-btn2 {
+        width: 50%;
+    }
+    .sec2 {
+        width: 100%;
+    }
+    .sec2 .center2 .update-text {
+        width: 50%;
+    }
+    .sec2 .center2 a .update-btn {
+        background-size: 70%;
+    }
+    .sec3 .notice {
+        width: 80%;
+    }
+    .sec3 .notice .title {
+        font-size: 15px;
+    }
+    .sec3 .notice .icon-n {
+        width: 30%;
+    }
+    .sec3 .notice .date {
+        font-size: 15px;
+    }
+    .sec3 .link {
+        width: 80%;
+    }
+    .sec3 .link .btn-forum {
+        width: 80%;
+    }
+    .sec3 .link .btn-forum img {
+        width: 80%;;
+    }
+    .sec3 .link .btn-forum span {
+        font-size: 16px;
+    }
+    .sec3 .link .btn-facebook {
+        width: 80%;
+    }
+    .sec3 .link .btn-facebook img {
+        width: 80%;;
+    }
+    .sec3 .link .btn-facebook span {
+        font-size: 16px;
+    }
+    .sec3 .link .btn-youtube {
+        width: 80%;
+    }
+    .sec3 .link .btn-youtube img {
+        width: 80%;;
+    }
+    .sec3 .link .btn-youtube span {
+        font-size: 16px;
+    }
+    .sec3 .more-btn {
+        width: 50%;
+        margin-left: 17%;
+    }
+    .sec4 .center4 .down-title p {
+        font-size: 18px;
+    }
+    .sec4 .down-btn a {
+        width: 50%;
+    }
+    .sec4 .down-btn a .app-store {
+        background-size: 70%;
+        margin-left: 30%;
+    }
+    .sec4 .down-btn a .google-play {
+        background-size: 70%;
+        margin-left: -10%;
+    }
+    footer .left-box {
+        display: none;
+    }
+    footer .text-box p {
+        font-size: 10px;
+    }
+    main .top {
+        right: 30px;
+    }
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
