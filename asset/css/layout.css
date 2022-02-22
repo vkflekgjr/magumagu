@@ -18,10 +18,14 @@ li {
 button {
     cursor: pointer;
 }
-body {
-    width: 100%;
+html,body {
     font-family: 'NanumSquare', sans-serif; 
+    width: 100%;
     overflow-x: hidden;
+}
+.wrap {
+    position: relative;
+    
 }
 .nav-up {
     top: -43px;
@@ -34,7 +38,6 @@ header {
     top: 0;
     left: 0;
     z-index: 2;
-    transition: top 0.2s ease-in-out;
 }
 header .netmarble {
     width: 146px;
@@ -233,6 +236,11 @@ main {
     height: 940px;
     overflow: hidden;
 }
+.sec1 .videobox video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .sec1 .center {
     width: 720px;
     height: 700px;
@@ -286,8 +294,6 @@ main {
     width: 100%;
     height: 1200px;
     background: url(../images/background-img.jpg) no-repeat 50% 0;
-    background-size: cover;
-    background-position: center;
 }
 .sec2 .center2 {
     width: 720px;
@@ -640,146 +646,6 @@ top: 16px;
 background: #fed619;
 z-index: -1;
 }
-@media screen and (max-width: 768px) {
-    header .panel-active {
-        width: 100%;
-        height: 100vh;
-    }
-    header .panel-active .panel-inner {
-        width: 100%;
-    }
-    header .panel-active .panel-inner nav {
-        width: 100%;
-    }
-    header .panel-active .panel-inner nav ul li {
-        font-size: 16px;
-        width : 90%;
-        margin-left: 15px;
-    }
-    header .panel-active .panel-inner .menu-community {
-        background-size: 70%;
-        margin-left: 30%;
-    }
-    header .panel-active .panel-inner .menu-facebook {
-        background-size: 50%;
-    }
-    header .panel-active .panel-inner .menu-youtube {
-        background-size: 70%;
-
-    }
-    header .sharebox {
-        width: 90%;
-    }
-    header .sharebox p {
-        font-size: 14px;
-        margin-left: 12px;
-    }
-    header .sharebox .facebook-share {
-        background-size: 70%;
-        margin-left: 25%;
-    }
-    header .sharebox .link-share {
-        background-size: 70%;
-    }
-    header .logo {
-        width: 18%;
-    }
-    header .menu-box {
-        width: 30%;
-    }
-    header .menu-box .download-btn {
-        width: 70%;
-        font-size: 12px;
-    }
-    .sec1 .center .logobig {
-        width: 30%;
-    }
-    .sec1 .center .main-text {
-        width: 60%;
-    }
-    .sec1 .center .download-btn2 {
-        width: 50%;
-    }
-    .sec2 {
-        width: 100%;
-    }
-    .sec2 .center2 .update-text {
-        width: 50%;
-    }
-    .sec2 .center2 a .update-btn {
-        background-size: 70%;
-    }
-    .sec3 .notice {
-        width: 80%;
-    }
-    .sec3 .notice .title {
-        font-size: 15px;
-    }
-    .sec3 .notice .icon-n {
-        width: 30%;
-    }
-    .sec3 .notice .date {
-        font-size: 15px;
-    }
-    .sec3 .link {
-        width: 80%;
-    }
-    .sec3 .link .btn-forum {
-        width: 80%;
-    }
-    .sec3 .link .btn-forum img {
-        width: 80%;;
-    }
-    .sec3 .link .btn-forum span {
-        font-size: 16px;
-    }
-    .sec3 .link .btn-facebook {
-        width: 80%;
-    }
-    .sec3 .link .btn-facebook img {
-        width: 80%;;
-    }
-    .sec3 .link .btn-facebook span {
-        font-size: 16px;
-    }
-    .sec3 .link .btn-youtube {
-        width: 80%;
-    }
-    .sec3 .link .btn-youtube img {
-        width: 80%;;
-    }
-    .sec3 .link .btn-youtube span {
-        font-size: 16px;
-    }
-    .sec3 .more-btn {
-        width: 50%;
-        margin-left: 17%;
-    }
-    .sec4 .center4 .down-title p {
-        font-size: 18px;
-    }
-    .sec4 .down-btn a {
-        width: 50%;
-    }
-    .sec4 .down-btn a .app-store {
-        background-size: 70%;
-        margin-left: 30%;
-    }
-    .sec4 .down-btn a .google-play {
-        background-size: 70%;
-        margin-left: -10%;
-    }
-    footer .left-box {
-        display: none;
-    }
-    footer .text-box p {
-        font-size: 10px;
-    }
-    main .top {
-        right: 30px;
-    }
-}
-
 .blind {
     position: absolute;
     clip: rect(0 0 0 0);

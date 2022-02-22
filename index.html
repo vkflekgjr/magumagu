@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" >
     <title>마구마구 2021 모바일 - 넷마블</title>
     <link rel="stylesheet" href="./asset/css/layout.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
@@ -289,8 +289,8 @@
 
         $ ('#menu-btn').on("click", function (e) {
             e.preventDefault();
-            $('#panel-active').show();
             $('#panel-active').animate({'right':'0px'}),400;
+            $('#panel-active').show();
         })
         $ ('#close-btn').on("click", function (e) {
             e.preventDefault();
